@@ -1,0 +1,5 @@
+---
+# configure services
+
+- name: Make sure the wzrd daemon is on the box
+  template: src=wzrd.conf dest=/etc/init/wzrd.conf backup=no

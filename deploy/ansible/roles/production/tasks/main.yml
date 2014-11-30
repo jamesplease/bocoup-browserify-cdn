@@ -1,0 +1,11 @@
+---
+# configure for production
+
+- name: Make sure the base directory exsists
+  file: path={{app_base_path}} state=directory
+
+- name: Make sure node_modules are on the box
+  synchronize: src=../../node_modules dest={{app_base_path}}
+
+- name: Make sure a project config directory exists
+  file: path={{app_base_path}}/config state=directory

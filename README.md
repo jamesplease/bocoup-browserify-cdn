@@ -1,4 +1,4 @@
-bocoup-browserify-cdn
-=====================
+# bocoup-browserify-cdn
 
-Bocoup's hosted Browserify CDN
+Bocoup's hosted Browserify CDN.
+

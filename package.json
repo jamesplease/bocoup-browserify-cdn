@@ -4,9 +4,8 @@
   "description": "Bocoup's hosted Browserify CDN.",
   "main": "index.js",
   "scripts": {
-    "get-secrets": "./.bin/get-secrets",
-    "provision": "ansible-playbook -i deploy/ansible/hosts deploy/ansible/provision.yml",
-    "deploy": "ansible-playbook -i deploy/ansible/hosts deploy/ansible/deploy.yml"
+    "provision": "cd deploy/ansible && ansible-playbook -i hosts provision.yml",
+    "deploy": "cd deploy/ansible && ansible-playbook -i hosts deploy.yml"
   },
   "repository": {
     "type": "git",
@@ -18,13 +17,6 @@
     "url": "https://github.com/jmeas/bocoup-browserify-cdn/issues"
   },
   "homepage": "https://github.com/jmeas/bocoup-browserify-cdn",
-  "devDependencies": {
-    "bach": "^0.4.0",
-    "chalk": "^0.5.1",
-    "mkdirp": "^0.5.0",
-    "ssh2": "^0.3.6",
-    "userhome": "^1.0.0"
-  },
   "dependencies": {
     "browserify-cdn": "^0.3.2"
   }
